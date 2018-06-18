@@ -1,0 +1,42 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+  
+<ion-header>
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+  
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+  <ion-card>
+    <img src="assets/imgs/OBI.png"/>
+  </ion-card>
+  </div>
+<ion-list>
+
+  <ion-item>
+    <ion-label color="primary" stacked >Phone No</ion-label>
+    <ion-input type="text" #username></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>PIN</ion-label>
+    <ion-input type="password" #password></ion-input>
+  </ion-item>
+  
+  <button ion-button full color="primary" (click)="login()">Login</button>
+  <button ion-button full color="primary" (click)="login()">REGISTER</button>
+
+</ion-list>
+
+
+</ion-content>

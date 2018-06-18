@@ -1,18 +1,43 @@
-<ion-header>
+<ion-header color="dark">
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon color="dark" name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-item>
+  <ion-label color="red"><button ion-button color="primary" (click)="login()">Create</button></ion-label>
+  <ion-select [(ngModel)]="ion-select">
+    <ion-option value="f">Obituary</ion-option>
+    <ion-option value="m">Appreciation</ion-option>
+     <ion-option value="m">Memorials</ion-option>
+  </ion-select>
+ 
+  </ion-item>
+ 
+  <div class="bg">
+  <button mat-button >Obituary </button><button mat-button>Appriciation</button><button mat-button (click)="login()">Memorials</button>
+   </div>
+    <input type="file" name="myImage" image-with-preview
+         ng-model="image"
+         accept="image/jpeg,image/png"
+         dimensions="height < 400 && width < 1800 && width > 2 * height">
+  <span class="error" ng-show="myForm.myImage.$error.image">
+    Not a JPEG or a PNG!
+    egjvh
+  </span>
+  <span class="error" ng-show="myForm.myImage.$error.dimensions">
+    Invalid dimensions! Expecting a landscape image smaller than 1800x400.
+  </span>
+  <img ng-show="image.src"/>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+         
+  
+          
+          
 </ion-content>
